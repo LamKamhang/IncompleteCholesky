@@ -1,5 +1,5 @@
 # Incomplete Cholesky Factorization
-This project is a Performance Evaluation of cuSparse Incomplete Cholesky Method. 
+This project is a Performance Evaluation of cuSparse Incomplete Cholesky Method.
 
 And the project evaluates it compared with Normal cuSparse Cholesky Factorization Method、Eigen Cholesky Factorization Method. We focus on three things, one of which is correctness, then accuracy and finally computational efficiency.
 
@@ -17,5 +17,13 @@ In the test cases, the matrix will diverse in dims. And the density will distrib
 - [ ] TODO
 
 ## Test for Efficiency
+
+The time overhead is mainly reflected in three parts in the GPU program.
+
+- Memory Copy
+- Calculation
+- Synchronize
+
+Thus, when evaluating cuSPARSE programs, the above three points need to be considered.
 
 - [ ] TODO

@@ -14,8 +14,8 @@ endif(CUDA_FOUND)
 
 find_package(Eigen3 REQUIRED)
 if(EIGEN3_FOUND)
-  message(STATUS "Eigen_include_dir: ${EIGEN3_INCLUDE_DIR}")
-  include_directories(${EIGEN3_INCLUDE_DIR})
+  message(STATUS "Eigen_include_dirs: ${EIGEN3_INCLUDE_DIRS}")
+  include_directories(${EIGEN3_INCLUDE_DIRS})
 endif(EIGEN3_FOUND)
 
 add_subdirectory(src)
