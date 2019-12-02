@@ -7,7 +7,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
 	<meta name="created" content="2019-12-02T16:17:07.470660890"/>
-	<meta name="changed" content="2019-12-02T18:08:34.266323941"/>
+	<meta name="changed" content="2019-12-03T01:12:47.485769012"/>
 	
 	<style type="text/css">
 		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Noto Sans CJK SC"; font-size:x-small }
@@ -20,102 +20,575 @@
 
 <body>
 <table cellspacing="0" border="0">
-	<colgroup span="3" width="85"></colgroup>
+	<colgroup width="127"></colgroup>
+	<colgroup width="40"></colgroup>
+	<colgroup width="62"></colgroup>
 	<colgroup width="97"></colgroup>
-	<colgroup width="85"></colgroup>
-	<colgroup width="132"></colgroup>
+	<colgroup width="88"></colgroup>
 	<colgroup width="210"></colgroup>
 	<colgroup width="109"></colgroup>
 	<colgroup width="175"></colgroup>
 	<tr>
 		<td colspan=3 height="17" align="center" valign=middle><font face="Liberation Sans">Matrix Type</font></td>
 		<td colspan=2 align="center" valign=middle><font face="Liberation Sans">Metric</font></td>
-		<td colspan=4 align="center" valign=middle><font face="Liberation Sans">Solver Type</font></td>
 		</tr>
 	<tr>
 		<td height="17" align="center" valign=middle><font face="Liberation Sans">Matrix</font></td>
 		<td align="center" valign=middle><font face="Liberation Sans">N</font></td>
 		<td align="center" valign=middle><font face="Liberation Sans">NNZ</font></td>
 		<td colspan=2 align="center" valign=middle><br></td>
-		<td align="center" valign=middle><font face="Liberation Sans">cuSparse::Cholesky</font></td>
 		<td align="center" valign=middle><font face="Liberation Sans">cuSPARSE::IncompleteCholesky</font></td>
 		<td align="center" valign=middle><font face="Liberation Sans">Eigen::Cholesky</font></td>
 		<td align="center" valign=middle><font face="Liberation Sans">Eigen::IncompleteCholesky</font></td>
 	</tr>
 	<tr>
-		<td rowspan=10 height="171" align="center" valign=middle><br></td>
-		<td rowspan=10 align="center" valign=middle><br></td>
-		<td rowspan=10 align="center" valign=middle><br></td>
+		<td rowspan=90 height="1536" align="center" valign=middle><font face="Liberation Serif">Random SPD Matrix</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="4996" sdnum="2052;"><font face="Liberation Serif">4996</font></td>
 		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
 		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="254.95435" sdnum="2052;"><font face="Liberation Serif">254.95435</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="11.567501" sdnum="2052;"><font face="Liberation Serif">11.567501</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="24.578241" sdnum="2052;"><font face="Liberation Serif">24.578241</font></td>
 	</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-	</tr>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.10367" sdnum="2052;"><font face="Liberation Serif">1.10367</font></td>
+		</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
 		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
-	</tr>
+		</tr>
 	<tr>
 		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
 		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.010724" sdnum="2052;"><font face="Liberation Serif">0.010724</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="5.00565" sdnum="2052;"><font face="Liberation Serif">5.00565</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.339634" sdnum="2052;"><font face="Liberation Serif">3.339634</font></td>
 	</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-	</tr>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.243836" sdnum="2052;"><font face="Liberation Serif">0.243836</font></td>
+		</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-		<td align="center" valign=middle bgcolor="#00AAAD"><br></td>
-	</tr>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.04538" sdnum="2052;"><font face="Liberation Serif">0.04538</font></td>
+		</tr>
 	<tr>
 		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
 		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
 		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="16.573151" sdnum="2052;"><font face="Liberation Serif">16.573151</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="27.917875" sdnum="2052;"><font face="Liberation Serif">27.917875</font></td>
 	</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-	</tr>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="256.426475" sdnum="2052;"><font face="Liberation Serif">256.426475</font></td>
+		</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
 		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
-	</tr>
+		</tr>
 	<tr>
 		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
 		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="9980" sdnum="2052;"><font face="Liberation Serif">9980</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.313796" sdnum="2052;"><font face="Liberation Serif">0.313796</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="43.373831" sdnum="2052;"><font face="Liberation Serif">43.373831</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="35.493786" sdnum="2052;"><font face="Liberation Serif">35.493786</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.17938" sdnum="2052;"><font face="Liberation Serif">1.17938</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.009042" sdnum="2052;"><font face="Liberation Serif">0.009042</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="4.161629" sdnum="2052;"><font face="Liberation Serif">4.161629</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.148661" sdnum="2052;"><font face="Liberation Serif">3.148661</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.258124" sdnum="2052;"><font face="Liberation Serif">0.258124</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.043307" sdnum="2052;"><font face="Liberation Serif">0.043307</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="47.53546" sdnum="2052;"><font face="Liberation Serif">47.53546</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="38.642447" sdnum="2052;"><font face="Liberation Serif">38.642447</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="1.842409" sdnum="2052;"><font face="Liberation Serif">1.842409</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000002" sdnum="2052;"><font face="Liberation Serif">2E-06</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000001" sdnum="2052;"><font face="Liberation Serif">1E-06</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="14970" sdnum="2052;"><font face="Liberation Serif">14970</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.266479" sdnum="2052;"><font face="Liberation Serif">0.266479</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="338.284518" sdnum="2052;"><font face="Liberation Serif">338.284518</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="54.585326" sdnum="2052;"><font face="Liberation Serif">54.585326</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.435188" sdnum="2052;"><font face="Liberation Serif">1.435188</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.009125" sdnum="2052;"><font face="Liberation Serif">0.009125</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="8.34102" sdnum="2052;"><font face="Liberation Serif">8.34102</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.31571" sdnum="2052;"><font face="Liberation Serif">3.31571</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.296428" sdnum="2052;"><font face="Liberation Serif">0.296428</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.042985" sdnum="2052;"><font face="Liberation Serif">0.042985</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="346.625538" sdnum="2052;"><font face="Liberation Serif">346.625538</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="57.901036" sdnum="2052;"><font face="Liberation Serif">57.901036</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="2.088732" sdnum="2052;"><font face="Liberation Serif">2.088732</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000004" sdnum="2052;"><font face="Liberation Serif">4E-06</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000003" sdnum="2052;"><font face="Liberation Serif">3E-06</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="19932" sdnum="2052;"><font face="Liberation Serif">19932</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.266967" sdnum="2052;"><font face="Liberation Serif">0.266967</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="930.686811" sdnum="2052;"><font face="Liberation Serif">930.686811</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="74.194845" sdnum="2052;"><font face="Liberation Serif">74.194845</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.597362" sdnum="2052;"><font face="Liberation Serif">1.597362</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.009363" sdnum="2052;"><font face="Liberation Serif">0.009363</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="13.844366" sdnum="2052;"><font face="Liberation Serif">13.844366</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.462707" sdnum="2052;"><font face="Liberation Serif">3.462707</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.315445" sdnum="2052;"><font face="Liberation Serif">0.315445</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.0438" sdnum="2052;"><font face="Liberation Serif">0.0438</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="944.531177" sdnum="2052;"><font face="Liberation Serif">944.531177</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="77.657552" sdnum="2052;"><font face="Liberation Serif">77.657552</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="2.291327" sdnum="2052;"><font face="Liberation Serif">2.291327</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000004" sdnum="2052;"><font face="Liberation Serif">4E-06</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000004" sdnum="2052;"><font face="Liberation Serif">4E-06</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="24890" sdnum="2052;"><font face="Liberation Serif">24890</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.29497" sdnum="2052;"><font face="Liberation Serif">0.29497</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="1714.778882" sdnum="2052;"><font face="Liberation Serif">1714.778882</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="97.224196" sdnum="2052;"><font face="Liberation Serif">97.224196</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.803171" sdnum="2052;"><font face="Liberation Serif">1.803171</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.009289" sdnum="2052;"><font face="Liberation Serif">0.009289</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="19.922126" sdnum="2052;"><font face="Liberation Serif">19.922126</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.447294" sdnum="2052;"><font face="Liberation Serif">3.447294</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.352103" sdnum="2052;"><font face="Liberation Serif">0.352103</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.04353" sdnum="2052;"><font face="Liberation Serif">0.04353</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="1734.701008" sdnum="2052;"><font face="Liberation Serif">1734.701008</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="100.67149" sdnum="2052;"><font face="Liberation Serif">100.67149</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="2.541614" sdnum="2052;"><font face="Liberation Serif">2.541614</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000006" sdnum="2052;"><font face="Liberation Serif">6E-06</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0" sdnum="2052;"><font face="Liberation Serif">0</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000006" sdnum="2052;"><font face="Liberation Serif">6E-06</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="29840" sdnum="2052;"><font face="Liberation Serif">29840</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.468145" sdnum="2052;"><font face="Liberation Serif">0.468145</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="119.838581" sdnum="2052;"><font face="Liberation Serif">119.838581</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1.867624" sdnum="2052;"><font face="Liberation Serif">1.867624</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.009384" sdnum="2052;"><font face="Liberation Serif">0.009384</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="3.655834" sdnum="2052;"><font face="Liberation Serif">3.655834</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.39092" sdnum="2052;"><font face="Liberation Serif">0.39092</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.04324" sdnum="2052;"><font face="Liberation Serif">0.04324</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="123.494415" sdnum="2052;"><font face="Liberation Serif">123.494415</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="2.8202" sdnum="2052;"><font face="Liberation Serif">2.8202</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000007" sdnum="2052;"><font face="Liberation Serif">7E-06</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000008" sdnum="2052;"><font face="Liberation Serif">8E-06</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="88572" sdnum="2052;"><font face="Liberation Serif">88572</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="0.78911" sdnum="2052;"><font face="Liberation Serif">0.78911</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="501.379754" sdnum="2052;"><font face="Liberation Serif">501.379754</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="5.176148" sdnum="2052;"><font face="Liberation Serif">5.176148</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.00942" sdnum="2052;"><font face="Liberation Serif">0.00942</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="4.471421" sdnum="2052;"><font face="Liberation Serif">4.471421</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.96985" sdnum="2052;"><font face="Liberation Serif">0.96985</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.0438" sdnum="2052;"><font face="Liberation Serif">0.0438</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="505.851175" sdnum="2052;"><font face="Liberation Serif">505.851175</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="7.067508" sdnum="2052;"><font face="Liberation Serif">7.067508</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000025" sdnum="2052;"><font face="Liberation Serif">2.5E-05</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.000043" sdnum="2052;"><font face="Liberation Serif">4.3E-05</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="811272" sdnum="2052;"><font face="Liberation Serif">811272</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="4.200075" sdnum="2052;"><font face="Liberation Serif">4.200075</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200" sdval="21585.480484" sdnum="2052;"><font face="Liberation Serif">21585.480484</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="48.839402" sdnum="2052;"><font face="Liberation Serif">48.839402</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.010841" sdnum="2052;"><font face="Liberation Serif">0.010841</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD" sdval="15.299427" sdnum="2052;"><font face="Liberation Serif">15.299427</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="7.515" sdnum="2052;"><font face="Liberation Serif">7.515</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.044873" sdnum="2052;"><font face="Liberation Serif">0.044873</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D" sdval="21600.779911" sdnum="2052;"><font face="Liberation Serif">21600.779911</font></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="60.675857" sdnum="2052;"><font face="Liberation Serif">60.675857</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.001153" sdnum="2052;"><font face="Liberation Serif">0.001153</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.001679" sdnum="2052;"><font face="Liberation Serif">0.001679</font></td>
+	</tr>
+	<tr>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="2889828" sdnum="2052;"><font face="Liberation Serif">2889828</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="19.00738" sdnum="2052;"><font face="Liberation Serif">19.00738</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="372.569693" sdnum="2052;"><font face="Liberation Serif">372.569693</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.01281" sdnum="2052;"><font face="Liberation Serif">0.01281</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="12.123942" sdnum="2052;"><font face="Liberation Serif">12.123942</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.054935" sdnum="2052;"><font face="Liberation Serif">0.054935</font></td>
+		</tr>
+	<tr>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+	</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="403.84129" sdnum="2052;"><font face="Liberation Serif">403.84129</font></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.008611" sdnum="2052;"><font face="Liberation Serif">0.008611</font></td>
 		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
 		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td rowspan=10 align="center" valign=middle sdval="3000" sdnum="2052;"><font face="Liberation Serif">3000</font></td>
+		<td rowspan=10 align="center" valign=middle sdval="5011504" sdnum="2052;"><font face="Liberation Serif">5011504</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Compute Time</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="30.63388" sdnum="2052;"><font face="Liberation Serif">30.63388</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#FFF200"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200" sdval="1148.017909" sdnum="2052;"><font face="Liberation Serif">1148.017909</font></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#FFF200"><br></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Solve Time</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.016306" sdnum="2052;"><font face="Liberation Serif">0.016306</font></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00AAAD"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="13.239261" sdnum="2052;"><font face="Liberation Serif">13.239261</font></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#00AAAD"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00AAAD" sdval="0.060414" sdnum="2052;"><font face="Liberation Serif">0.060414</font></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Total Time</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Host2Device</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+		<td rowspan=3 align="center" valign=middle bgcolor="#00A65D"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Computation</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D" sdval="1192.024561" sdnum="2052;"><font face="Liberation Serif">1192.024561</font></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><font face="Liberation Sans">Device2Host</font></td>
+		<td align="center" valign=middle bgcolor="#00A65D"><br></td>
+		</tr>
+	<tr>
+		<td height="17" align="left"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><font face="Liberation Sans">Error(Iter)</font></td>
+		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
+		<td align="center" valign=middle bgcolor="#ED1C24" sdval="0.022457" sdnum="2052;"><font face="Liberation Serif">0.022457</font></td>
 		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
 		<td align="center" valign=middle bgcolor="#ED1C24"><br></td>
 	</tr>
