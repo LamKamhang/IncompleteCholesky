@@ -107,10 +107,10 @@ namespace CudaIncompleteCholesky_ {
         nnz = mat.nonZeros();
         m = mat.rows();
 
-
+        time_utils::time_point_id_t host2device_id;
         TIMER_BEGIN(host2device_id);
         cudaMemInit(csrRowPtr, csrColInd, csrVal, x, m, nnz, mat);
-        double host2device_d = TIMER_END_D(host2device_id);
+        TIMER_END(host2device_id, "cuda compute memcpy<host2device>");
 
         // Suppose that A is m x m sparse matrix represented by CSR format,
         // Assumption:
@@ -129,6 +129,7 @@ namespace CudaIncompleteCholesky_ {
 
         // QueryPerformanceFrequency(&tc);
         // QueryPerformanceCounter(&t1);
+        time_utils::time_point_id_t compute_id;
         TIMER_BEGIN(compute_id);
         cusparseCreateMatDescr(&descr_M);
         cusparseSetMatIndexBase(descr_M, CUSPARSE_INDEX_BASE_ZERO);
@@ -188,16 +189,17 @@ namespace CudaIncompleteCholesky_ {
         if (CUSPARSE_STATUS_ZERO_PIVOT == status) {
           printf("L(%d,%d) is zero\n", numerical_zero, numerical_zero);
         }
-        double compute_d = TIMER_END_D(compute_id);
-        printf("host2device: %lf\n compute: %lf\n", host2device_d, compute_d);
+        TIMER_END(compute_id, "cuda compute calculation");
       }
 
     template<typename VectorType>
       VectorType solve(const VectorType& vec) {
+      time_utils::time_point_id_t host2device_id;
       TIMER_BEGIN(host2device_id);
       cudaMemcpy(d_x, &(vec(0)), sizeof(Scalar) * m, cudaMemcpyHostToDevice);
-      double host2device_d = TIMER_END_D(host2device_id);
+      TIMER_END(host2device_id, "cuda solve memcpy<host2device>");
       // step 6: solve L*z = x
+      time_utils::time_point_id_t solve_id;
       TIMER_BEGIN(solve_id);
       cusparseDcsrsv2_solve(handle, trans_L, m, nnz, &alpha, descr_L,
                             d_csrVal, d_csrRowPtr, d_csrColInd, info_L,
@@ -208,18 +210,18 @@ namespace CudaIncompleteCholesky_ {
                             d_csrVal, d_csrRowPtr, d_csrColInd, info_Lt,
                             d_z, d_y, policy_Lt, pBuffer);
       cudaThreadSynchronize();
-      double solve_d = TIMER_END_D(solve_id);
+      TIMER_END(solve_id, "cuda solve calculation");
 
       // QueryPerformanceCounter(&t2);
       //printf("Use Time:%f\n", (t2.QuadPart - t1.QuadPart) * 1.0 / tc.QuadPart);
       //print << <1, 1 >> > (d_y, m);
+      time_utils::time_point_id_t device2host_id;
       TIMER_BEGIN(device2host_id);
       y = new double[m];
       cudaMemcpy(y, d_y, m * sizeof(double), cudaMemcpyDeviceToHost);
       VectorType ret = Map<VectorXd>(y, m);
-      double device2host_d = TIMER_END_D(device2host_id);
+      TIMER_END(device2host_id, "cuda solve memcpy<device2host>");
 
-      printf("host2device: %lf\nsolve: %lf\ndevice2host:%lf\n", host2device_d, solve_d, device2host_d);
       return ret;
     }
     template<typename MatrixType>
