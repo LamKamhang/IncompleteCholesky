@@ -14,30 +14,49 @@ using namespace CudaIncompleteCholesky_;
 
 int main(int argc, char *argv[])
 {
+  using Vec = Eigen::VectorXd;
+  using SMat = Eigen::SparseMatrix<double>;
+
   auto seed = 1;
+  srand(seed);
 
-  // int n = 3000;
-  // std::vector<int> nnzs = {
-  //   5000, 10000, 15000, 20000, 25000, 30000, 90000, 900000, 4000000, 9000000
-  // };
-  // for (auto & nnz : nnzs )
-  // {
-  //   EvaluateSolver<SimplicialCholesky<SparseMatrix<double> > >("Sparse Cholesky solver", seed, nnzSparse<>, n, nnz);
-  //   // EvaluateSolver<SimplicialLLT<SparseMatrix<double> > >("Sparse Cholesky LLT solver", seed, nnzSparse<>, n, nnz);
-  //   // EvaluateSolver<SimplicialLDLT<SparseMatrix<double> > >("Sparse Cholesky LDLT solver", seed, nnzSparse<>, n, nnz);
-  //   EvaluateSolver<IncompleteCholesky<double> >("Incomplete Cholesky solver", seed, nnzSparse<>, n, nnz);
-  //   EvaluateSolver<CudaIncompleteCholesky<double> >("cuda Incomplete Cholesky solver", seed, nnzSparse<>, n, nnz);
-  // }
+  // different dense
+  int n = 3000;
+  std::vector<int> nnzs = {
+    5000, 10000, 15000, 20000, 25000, 30000, 90000, 900000, 4000000, 9000000
+  };
+  for (auto & nnz : nnzs )
+  {
+    const SMat A = nnzSparse(n, nnz);
+    const Vec b = Vec::Random(n);
 
-  int dense = 2;
+    if (nnz < 90000)
+      EvaluateSolver<SimplicialCholesky<SparseMatrix<double> > >("Sparse Cholesky solver", A, b);
+    // EvaluateSolver<SimplicialLLT<SparseMatrix<double> > >("Sparse Cholesky LLT solver", A, b);
+    // EvaluateSolver<SimplicialLDLT<SparseMatrix<double> > >("Sparse Cholesky LDLT solver", A, b);
+    EvaluateSolver<IncompleteCholesky<double> >("Incomplete Cholesky solver", A, b);
+    EvaluateSolver<CudaIncompleteCholesky<double> >("cuda Incomplete Cholesky solver", A, b);
+  }
+
+  // different dims
+  int dense = 10;
   std::vector<int> ns = {
     500, 1000, 5000, 10000, 200000
   };
   for (auto & n : ns)
   {
-    EvaluateSolver<SimplicialCholesky<SparseMatrix<double> > >("Sparse Cholesky solver", seed, nnzSparse<>, n, dense*n);
-    EvaluateSolver<IncompleteCholesky<double> >("Incomplete Cholesky solver", seed, nnzSparse<>, n, dense*n);
-    EvaluateSolver<CudaIncompleteCholesky<double> >("cuda Incomplete Cholesky solver", seed, nnzSparse<>, n, dense*n);
+    const SMat A = nnzSparse(n, dense * n);
+    const Vec b = Vec::Random(n);
+
+    if (dense * n < 90000)
+      EvaluateSolver<SimplicialCholesky<SparseMatrix<double> > >("Sparse Cholesky solver", A, b);
+    EvaluateSolver<IncompleteCholesky<double> >("Incomplete Cholesky solver", A, b);
+    EvaluateSolver<CudaIncompleteCholesky<double> >("cuda Incomplete Cholesky solver", A, b);
   }
+
+  // mat_rbf
+
+
+
   return 0;
 }

@@ -81,18 +81,14 @@ Eigen::SparseMatrix<T> random_SPD(int n)
   return Dense2Sparse(A, std::abs(Mat::Random(1,1)(0, 0)));
 }
 
-template<class SparseSolver, typename SPD, typename ... Args>
-void EvaluateSolver(const std::string &title, int seed, SPD&& spd, int n, Args&& ... args)
+template<class SparseSolver>
+void EvaluateSolver(const std::string &title, const Eigen::SparseMatrix<double> &SA, const Eigen::VectorXd &b)
 {
   using Vec = Eigen::VectorXd;
-  using SMat = Eigen::SparseMatrix<double>;
 
   info_msg("%s", title.c_str());
-  std::srand(seed);
 
   SparseSolver solver;
-
-  SMat SA = std::bind(std::forward<SPD>(spd), n, std::forward<Args>(args)...)();
 
   info_msg("Sparse Matrix number of non-zero elements %lu", SA.nonZeros());
 
@@ -101,20 +97,51 @@ void EvaluateSolver(const std::string &title, int seed, SPD&& spd, int n, Args&&
   solver.compute(SA);
   TIMER_END(compute_id, "framework compute");
 
-  // construct vector b
-  double error = 0;
-  // int iters = 1;
-  // for (int i = 0; i < iters; ++i)
-  //   {
-  const Vec b = Vec::Random(n);
+  // solve Ax = b
   time_utils::time_point_id_t solve_id;
   TIMER_BEGIN(solve_id);
   Vec x = solver.solve(b);
   TIMER_END(solve_id, "framework solve");
   // error metric: ||Ax - b||
-  error += (SA*x - b).norm();
-  // }
-  // error /= iters;
-  info_msg("framework error: %lf", error);
+  info_msg("framework error: %lf", (SA*x - b).norm());
   printf("\n");
 }
+
+// template<class SparseSolver, typename SPD, typename ... Args>
+// void EvaluateSolver(const std::string &title, int seed, SPD&& spd, int n, Args&& ... args)
+// {
+//   using Vec = Eigen::VectorXd;
+//   using SMat = Eigen::SparseMatrix<double>;
+
+//   info_msg("%s", title.c_str());
+//   std::srand(seed);
+
+//   SparseSolver solver;
+
+//   SMat SA = std::bind(std::forward<SPD>(spd), n, std::forward<Args>(args)...)();
+
+//   info_msg("Sparse Matrix number of non-zero elements %lu", SA.nonZeros());
+
+//   time_utils::time_point_id_t compute_id;
+//   TIMER_BEGIN(compute_id);
+//   solver.compute(SA);
+//   TIMER_END(compute_id, "framework compute");
+
+//   // construct vector b
+//   double error = 0;
+//   // int iters = 1;
+//   // for (int i = 0; i < iters; ++i)
+//   //   {
+//   const Vec b = Vec::Random(n);
+
+//   time_utils::time_point_id_t solve_id;
+//   TIMER_BEGIN(solve_id);
+//   Vec x = solver.solve(b);
+//   TIMER_END(solve_id, "framework solve");
+//   // error metric: ||Ax - b||
+//   error += (SA*x - b).norm();
+//   // }
+//   // error /= iters;
+//   info_msg("framework error: %lf", error);
+//   printf("\n");
+// }
