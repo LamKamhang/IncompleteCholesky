@@ -44,7 +44,7 @@ Eigen::SparseMatrix<T> Dense2Sparse(const Eigen::Matrix<T, Eigen::Dynamic, Eigen
   return Sparse;
 }
 
-template<class T>
+template<class T = double>
 Eigen::SparseMatrix<T> nnzSparse(int n, int nnz)
 {
   using Tri = Eigen::Triplet<T>;
@@ -67,55 +67,54 @@ Eigen::SparseMatrix<T> nnzSparse(int n, int nnz)
   return Sparse;
 }
 
-class EvaluationFramework
-{
-public:
-  template<class SparseSolver>
-  static void random_SPD(SparseSolver &solver, int n, int nnz);
-};
-
-template<class SparseSolver>
-void EvaluationFramework::random_SPD(SparseSolver &solver, int n, int nnz)
+template<class T = double>
+Eigen::SparseMatrix<T> random_SPD(int n)
 {
   using Mat = Eigen::MatrixXd;
   using Vec = Eigen::VectorXd;
   using SMat = Eigen::SparseMatrix<double>;
 
   // construct SPD A
-  SMat SA;
-  if (nnz < 0 || nnz < n)
-    {
-      Mat A;
-      A = Mat::Random(n, n);
-      A = 0.5 * (A + A.transpose()) + Mat::Identity(n, n) * n;
-      SA = Dense2Sparse(A, std::abs(Mat::Random(1,1)(0, 0)));
-    }
-  else
-    {
-      SA = nnzSparse<double>(n, nnz);
-    }
-  info_msg("Sparse Matrix : number of non-zero elements %lu", SA.nonZeros());
+  Mat A;
+  A = Mat::Random(n, n);
+  A = 0.5 * (A + A.transpose()) + Mat::Identity(n, n) * n;
+  return Dense2Sparse(A, std::abs(Mat::Random(1,1)(0, 0)));
+}
 
+template<class SparseSolver, typename SPD, typename ... Args>
+void EvaluateSolver(const std::string &title, int seed, SPD&& spd, int n, Args&& ... args)
+{
+  using Vec = Eigen::VectorXd;
+  using SMat = Eigen::SparseMatrix<double>;
 
+  info_msg("%s", title.c_str());
+  std::srand(seed);
+
+  SparseSolver solver;
+
+  SMat SA = std::bind(std::forward<SPD>(spd), n, std::forward<Args>(args)...)();
+
+  info_msg("Sparse Matrix number of non-zero elements %lu", SA.nonZeros());
+
+  time_utils::time_point_id_t compute_id;
   TIMER_BEGIN(compute_id);
   solver.compute(SA);
-  double compute_d = TIMER_END_D(compute_id);
+  TIMER_END(compute_id, "framework compute");
 
   // construct vector b
   double error = 0;
-  double solve_d = 0;
-  int iters = 1;
-  for (int i = 0; i < iters; ++i)
-    {
-      const Vec b = Vec::Random(n);
-      TIMER_BEGIN(solve_id);
-      Vec x = solver.solve(b);
-      double d = TIMER_END_D(solve_id);
-      solve_d += d;
-      // error metric: ||Ax - b||
-      error += (SA*x - b).norm();
-    }
-  error /= iters;
-  solve_d /= iters;
-  printf("%lf\n%lf\n%lf\n%lf\n", compute_d, solve_d, compute_d + solve_d, error);
+  // int iters = 1;
+  // for (int i = 0; i < iters; ++i)
+  //   {
+  const Vec b = Vec::Random(n);
+  time_utils::time_point_id_t solve_id;
+  TIMER_BEGIN(solve_id);
+  Vec x = solver.solve(b);
+  TIMER_END(solve_id, "framework solve");
+  // error metric: ||Ax - b||
+  error += (SA*x - b).norm();
+  // }
+  // error /= iters;
+  info_msg("framework error: %lf", error);
+  printf("\n");
 }
