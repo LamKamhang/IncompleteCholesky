@@ -12,7 +12,8 @@ else
         exit 1
 fi
 
-cmake . -B$folder $flag -DCMAKE_C_COMPILER=/usr/bin/gcc-6
+# cmake . -B$folder $flag -DCMAKE_C_COMPILER=/usr/bin/gcc-6
+cmake . -B$folder $flag
 if [ $? -ne 0 ]; then
         echo "cmake failed."
         exit 1
