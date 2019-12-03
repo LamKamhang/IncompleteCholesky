@@ -26,5 +26,7 @@ if(EIGEN3_FOUND)
   include_directories(${EIGEN3_INCLUDE_DIRS})
 endif(EIGEN3_FOUND)
 
+include_directories(external)
+add_subdirectory(external/mat-rbf)
 add_subdirectory(src)
 add_subdirectory(tests)
