@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     SMat A;
     Vec b;
     rbf_SPD(argv[1], A, b);
-    info_msg("A.rows: %d\tA.cols: %d", A.rows(), A.cols());
+    info_msg("A.rows: %ld\tA.cols: %ld", A.rows(), A.cols());
     EvaluateSolver<SimplicialCholesky<SparseMatrix<double> > >("Sparse Cholesky solver", A, b);
     EvaluateSolver<IncompleteCholesky<double> >("Incomplete Cholesky solver", A, b);
     EvaluateSolver<CudaIncompleteCholesky<double> >("cuda Incomplete Cholesky solver", A, b);
